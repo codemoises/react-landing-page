@@ -6,7 +6,7 @@ import { SectionBackground } from '../SectionBackground';
 export const SectionContainer = ({ children, background = false }) => {
   return (
     <Styled.Container background={background}>
-        <SectionBackground>{children}</SectionBackground>
+      <SectionBackground>{children}</SectionBackground>
     </Styled.Container>
   );
 };
