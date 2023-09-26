@@ -3,6 +3,7 @@ import P from 'prop-types';
 import * as Styled from './styles';
 import { Heading } from '../Heading';
 
+// eslint-disable-next-line react/prop-types
 export const LogoLink = ({ text, srcImg = '', link }) => {
   return (
     <Heading size="small" uppercase>
