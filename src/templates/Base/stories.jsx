@@ -1,21 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Base } from '.';
-import mock from './mock';
-import { GridText } from '../../components/GridText';
-import GridMock from '../../components/GridText/mock';
-
-export const mockBase = {
-    children: (
-        <>
-            <GridText {...GridMock} background />
-            <GridText {...GridMock}  />
-            <GridText {...GridMock} background />
-            <GridText {...GridMock}  />
-            <GridText {...GridMock} background />
-        </>
-    ),
-    ...mock,
-  }
+import { mockBase } from './mock';
 
 export default {
   title: 'Base',
