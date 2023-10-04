@@ -36,8 +36,21 @@ export const mapSections = (sections = []) => {
     };
   };
   
-  export const mapSectionContent = (section) => {
-    return section;
+  export const mapSectionContent = (section = {}) => {
+    const {
+        __component: component = '',
+        title = '',
+        content: html = '',
+        metadata: { background = false, section_id: sectionId = '' } = false,
+      } = section;
+    
+      return {
+        component,
+        title,
+        background,
+        sectionId,
+        html,
+      };
   };
   
   export const mapSectionGrid = (section) => {
