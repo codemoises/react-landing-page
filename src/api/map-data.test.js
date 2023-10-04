@@ -1,17 +1,16 @@
 /* eslint-disable prettier/prettier */
 import { mapData } from './map-data';
-import { pagesData } from './map-data';
 
 describe('map-data', () => {
   it('should map data even if there is no data', () => {
-    const pageData = mapData()[0];
+    const pagesData = mapData()[0];
     expect(pagesData.footerHtml).toBe('');
     expect(pagesData.slug).toBe('');
     expect(pagesData.title).toBe('');
   });
 
   it('should map data even if there are data', () => {
-    const pageData = mapData([
+    const pagesData = mapData([
       { 
         footer_text: '<p>Hey</p>',
         slug: 'slug',
