@@ -9,12 +9,16 @@ function Home() {
 
   useEffect(() => {
     const load = async () => {
-      const data = await fetch(
-        'http://localhost:1337/pages/?slug=landing-page',
-      );
-      const json = await data.json();
-      const pageData = mapData();
-      setData(pageData[0]);
+      try {
+        const data = await fetch(
+          'http://localhost:1337/pages/?slug=landing-page',
+        );
+        const json = await data.json();
+        const pageData = mapData();
+        setData(pageData[0]);
+      } catch (e) {
+        setData(undefined);
+      }
 
       load();
     };
