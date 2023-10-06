@@ -12,7 +12,7 @@ export const SectionBackground = ({
 }) => {
   const id = sectionId ? sectionId : random();
   return (
-    <Styled.Container background={background} id={id}>
+    <Styled.Container background={background} id={sectionId}>
       <SectionContainer>{children}</SectionContainer>
     </Styled.Container>
   );
