@@ -5,7 +5,7 @@ import * as Styled from './styles';
 import { useEffect, useState } from 'react';
 import { mapData } from '../../api/map-data';
 import { PageNotFound } from '../PageNotFound';
-import { Loanding } from '../Loading';
+import { Loading } from '../Loading';
 import { GridTwoColumn } from '../../components/GridTwoColumn';
 import { GridContent } from '../../components/GridContent';
 import { GridText } from '../../components/GridText';
@@ -32,14 +32,14 @@ function Home() {
 
       load();
     };
-  }, []);
+  }, [location]);
 
   if (data === undefined) {
     return <PageNotFound />;
   }
 
   if (data && !data.slug) {
-    return <Loanding />;
+    return <Loading />;
   }
 
   const { menu, sections, footerHtml, slug } = data;
