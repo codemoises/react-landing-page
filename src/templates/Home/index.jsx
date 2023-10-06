@@ -3,6 +3,8 @@ import { Base } from '../Base';
 import * as Styled from './styles';
 import { useEffect, useState } from 'react';
 import { mapData } from '../../api/map-data';
+import { PageNotFound } from '../PageNotFound';
+import { Loanding } from '../Loading';
 
 function Home() {
   const [data, setData] = useState([]);
@@ -25,11 +27,11 @@ function Home() {
   }, []);
 
   if (data === undefined) {
-    return <h1>Página não encontrada</h1>;
+    return <PageNotFound />;
   }
 
   if (data && !data.slug) {
-    return <h1>Carregando...</h1>;
+    return <Loanding />;
   }
 
   return <Base {...mockBase} />;
