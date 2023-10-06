@@ -4,9 +4,11 @@ export const mapMenu = (menu = {}) => {
     open_in_new_tab: newTab = false,
     logo_text: text = '',
     logo_link: link = '',
-    logo: { url: srcImg = '' } = '',
     menu: links = [],
   } = menu;
+
+  const srcImg = menu.logo && menu.logo.url ? menu.logo.url : '';
+
   return {
     newTab,
     text,
