@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Base } from '.';
 import { mockBase } from './mock';
 

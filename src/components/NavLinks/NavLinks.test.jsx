@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
 import { NavLinks } from '.';
@@ -14,14 +13,12 @@ describe('<NavLinks />', () => {
 
   it('should not render links', () => {
     renderTheme(<NavLinks />);
-    expect(screen.queryAllByText(/link/i)).toHaveLength(mock.length);
+    expect(screen.queryAllByText(/links/i)).toHaveLength(0);
   });
 
   it('should render links', () => {
     renderTheme(<NavLinks links={mock} />);
-    screen.debug(screen.getByText(/link 10/i).parentElement);
-    expect(screen.getByText(/link 10/i).parentElement).
-    toHaveStyleRule(
+    expect(screen.getByText(/link 10/i).parentElement).toHaveStyleRule(
       'flex-flow',
       'column wrap',
       {
@@ -31,7 +28,7 @@ describe('<NavLinks />', () => {
   });
 
   it('should match snapshot', () => {
-    const {container} = renderTheme(<NavLinks links={mock} />);
-    expect(container).toMatchSnapshot();
+    const { container } = renderTheme(<NavLinks links={mock} />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

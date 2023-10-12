@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
@@ -6,7 +5,7 @@ export const Container = styled.div`
     padding-top: 5.4rem;
 
     @media ${theme.media.lteMedium} {
-        padding-top: 0;
+      padding-top: 0;
     }
   `}
 `;

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export const mapMenu = (menu = {}) => {
   const {
     open_in_new_tab: newTab = false,
@@ -27,9 +26,9 @@ export const mapMenuLinks = (links = []) => {
     } = item;
 
     return {
-        newTab,
-        children,
-        link,
-    }
+      newTab,
+      children,
+      link,
+    };
   });
 };

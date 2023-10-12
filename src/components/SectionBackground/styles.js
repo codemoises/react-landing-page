@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 const containerBackgroundActivate = (theme) => css`

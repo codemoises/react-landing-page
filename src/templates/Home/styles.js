@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Wrapper = styled.div``;

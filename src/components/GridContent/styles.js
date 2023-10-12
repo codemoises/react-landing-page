@@ -1,8 +1,7 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  ${({ theme }) => css`
+  ${() => css`
     text-align: center;
     max-width: 58rem;
     margin: 0 auto;

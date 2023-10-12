@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import P from 'prop-types';
 import * as Styled from './styles';
 import { TextComponent } from '../TextComponent';

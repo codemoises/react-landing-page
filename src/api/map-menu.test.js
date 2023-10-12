@@ -1,5 +1,4 @@
-/* eslint-disable prettier/prettier */
-import { mapMenu, mapMenuLinks } from "./map-menu";
+import { mapMenu, mapMenuLinks } from './map-menu';
 
 describe('map-menu', () => {
   it('should return a predefined object if no data', () => {
@@ -13,25 +12,25 @@ describe('map-menu', () => {
 
   it('should map menu to match keys and velues required', () => {
     const menu = mapMenu({
-        open_in_new_tab: false,
-        logo_text: 'Landing Page',
-        logo_link: '#home',
-        menu: [
-          {
-            open_in_new_tab: false,
-            link_text: 'pricing',
-            url: '#pricing',
-          },
-          {
-            open_in_new_tab: false,
-            link_text: 'contact',
-            url: '#contact',
-          },
-        ],
-        logo: {
-          url: 'a.svg',
+      open_in_new_tab: false,
+      logo_text: 'Landing Page',
+      logo_link: '#home',
+      menu: [
+        {
+          open_in_new_tab: false,
+          link_text: 'pricing',
+          url: '#pricing',
         },
-      });
+        {
+          open_in_new_tab: false,
+          link_text: 'contact',
+          url: '#contact',
+        },
+      ],
+      logo: {
+        url: 'a.svg',
+      },
+    });
     expect(menu.newTab).toBe(false);
     expect(menu.text).toBe('Landing Page');
     expect(menu.srcImg).toBe('a.svg');
@@ -43,20 +42,20 @@ describe('map-menu', () => {
 
   it('should return an empty array if no links', () => {
     const links = mapMenuLinks();
-    expect(links).toEqual();
+    expect(links).toEqual([]);
   });
 
   it('should map links if links passed', () => {
     const links = mapMenuLinks([
-        {
-          open_in_new_tab: false,
-          link_text: 'pricing',
-          url: '#pricing',
-        },
-        {},
-      ]);
-      expect(links[0].newTab).toBe(false);
-      expect(links[0].children).toBe('pricing');
-      expect(links[0].link).toBe('#pricing');
+      {
+        open_in_new_tab: false,
+        link_text: 'pricing',
+        url: '#pricing',
+      },
+      {},
+    ]);
+    expect(links[0].newTab).toBe(false);
+    expect(links[0].children).toBe('pricing');
+    expect(links[0].link).toBe('#pricing');
   });
 });

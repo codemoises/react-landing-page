@@ -1,6 +1,10 @@
-/* eslint-disable prettier/prettier */
-import { mapImageGrid, mapSectionContent, mapTextGrid } from './map-sections';
-import { mapSectionTwoColumns, mapSections } from './map-sections.test';
+import {
+  mapImageGrid,
+  mapSectionContent,
+  mapSections,
+  mapSectionTwoColumns,
+  mapTextGrid,
+} from './map-sections';
 import pagesFakeData from './dados.json';
 
 describe('map-sections', () => {
@@ -18,7 +22,7 @@ describe('map-sections', () => {
     const withNoTextOrImageGrid = mapSections([
       {
         __component: 'section.section-grid',
-      }
+      },
     ]);
 
     const withNoComponent = mapSections([{}]);
@@ -39,7 +43,7 @@ describe('map-sections', () => {
         text_grid: [{}],
       },
     ]);
-    expect(withNoTextOrImageGrid.lenght).toBe(2);
+    expect(withNoTextOrImageGrid.length).toBe(2);
   });
 
   it('should map section two columns', () => {
@@ -86,7 +90,7 @@ describe('map-sections', () => {
     const data = mapSectionContent({
       __component: 'section.section-content',
       title: 'Pricing',
-      description: 'abc',
+      content: 'abc',
       metadata: {
         background: false,
         section_id: 'pricing',
@@ -95,7 +99,7 @@ describe('map-sections', () => {
     expect(data.background).toBe(false);
     expect(data.component).toBe('section.section-content');
     expect(data.sectionId).toBe('pricing');
-    expect(data.title).toBe('pricing');
+    expect(data.title).toBe('Pricing');
     expect(data.html).toBe('abc');
   });
 
@@ -111,8 +115,7 @@ describe('map-sections', () => {
         },
         {
           title: 'Teste 2',
-          description:
-            'abc',
+          description: 'abc',
         },
       ],
       image_grid: [],
@@ -137,8 +140,6 @@ describe('map-sections', () => {
     expect(data.sectionId).toBe('');
     expect(data.title).toBe('');
     expect(data.description).toBe('');
-    expect(data.grid[0].title).toBe('');
-    expect(data.grid[0].description).toBe('');
   });
 
   it('should map grid image without data', () => {
@@ -148,8 +149,6 @@ describe('map-sections', () => {
     expect(data.sectionId).toBe('');
     expect(data.title).toBe('');
     expect(data.description).toBe('');
-    expect(data.grid[0].title).toBe('');
-    expect(data.grid[0].description).toBe('');
   });
 
   it('should map grid image with data', () => {

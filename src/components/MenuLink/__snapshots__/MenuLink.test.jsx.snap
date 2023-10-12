@@ -6,7 +6,7 @@ exports[`<MenuLink /> should render open in a new tab 1`] = `
   text-decoration: none;
   font-size: 1.6rem;
   padding: 1.6rem;
-  color: #0a1128;
+  color: #0A1128;
   position: relative;
 }
 

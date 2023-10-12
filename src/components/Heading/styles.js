@@ -1,15 +1,14 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 const titleSize = {
   small: (theme) => css`
-    font-size: ${theme.font.sizes.medium}
+    font-size: ${theme.font.sizes.medium};
   `,
   medium: (theme) => css`
-    font-size: ${theme.font.sizes.large}
+    font-size: ${theme.font.sizes.large};
   `,
   big: (theme) => css`
-    font-size: ${theme.font.sizes.xlarge}
+    font-size: ${theme.font.sizes.xlarge};
   `,
   huge: (theme) => css`
     font-size: ${theme.font.sizes.xhuge};

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { renderTheme } from '../../styles/render-theme';
 import { LogoLink } from '.';
 import { screen } from '@testing-library/react';

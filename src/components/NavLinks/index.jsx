@@ -1,12 +1,11 @@
-/* eslint-disable prettier/prettier */
 import P from 'prop-types';
 import * as Styled from './styles';
 import { MenuLink } from '../MenuLink';
 
 export const NavLinks = ({ links = [] }) => {
   return (
-    <Styled.Container>
-      {links.map(link => (
+    <Styled.Container aria-label="Main menu">
+      {links.map((link) => (
         <MenuLink key={link.link} {...link} />
       ))}
     </Styled.Container>
@@ -20,5 +19,5 @@ NavLinks.propTypes = {
       link: P.string.isRequired,
       newTab: P.bool,
     }),
-  ).isRequired,
+  ),
 };

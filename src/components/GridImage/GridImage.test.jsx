@@ -1,8 +1,7 @@
-/* eslint-disable prettier/prettier */
 import { renderTheme } from '../../styles/render-theme';
 import { GridImage } from '.';
+
 import mock from './mock';
-import React from 'react';
 
 describe('<GridImage />', () => {
   it('should render with background', () => {

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import P from 'prop-types';
 import * as Styled from './styles';
 import { Menu } from '../../components/Menu';
@@ -8,12 +7,12 @@ import { GoTop } from '../../components/GoTop';
 export const Base = ({ links, logoData, footerHtml, children }) => {
   return (
     <>
-        <Menu links={links} logoData={logoData} />
-        <Styled.Container>
-            {children}
-            <Footer footerHtml={footerHtml} />
-        </Styled.Container>
-        <GoTop />
+      <Menu links={links} logoData={logoData} />
+      <Styled.Container>
+        {children}
+        <Footer footerHtml={footerHtml} />
+      </Styled.Container>
+      <GoTop />
     </>
   );
 };

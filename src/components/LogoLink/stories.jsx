@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { LogoLink } from '.';
 
 export default {
@@ -7,7 +6,7 @@ export default {
   args: {
     text: 'LogoLink',
     srcImg: 'assets/images/logo.svg',
-    link: 'http://localhost'
+    link: 'http://localhost',
   },
 };
 
@@ -20,13 +19,13 @@ export const ImageOnly = (args) => {
 };
 
 export const TextOnly = (args) => {
-    return (
-      <div>
-        <LogoLink {...args} />
-      </div>
-    );
-  };
+  return (
+    <div>
+      <LogoLink {...args} />
+    </div>
+  );
+};
 
 TextOnly.args = {
-    srcImg: '',
+  srcImg: '',
 };

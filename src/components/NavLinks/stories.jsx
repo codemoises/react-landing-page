@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { NavLinks } from '.';
 import links from './mock';
 
@@ -8,9 +7,9 @@ export default {
   args: {
     links: links,
   },
-  argType: {
+  argTypes: {
     links: { type: '' },
-  }
+  },
 };
 
 export const Template = (args) => {

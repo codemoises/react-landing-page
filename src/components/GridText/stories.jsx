@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { GridText } from '.';
 
 import mock from './mock';

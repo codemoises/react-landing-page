@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { mapSections } from './map-sections';
 import { mapMenu } from './map-menu';
 

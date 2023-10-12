@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
 import { Title as Heading } from '../Heading/styles';

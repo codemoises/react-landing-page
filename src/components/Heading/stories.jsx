@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Heading } from '.';
 
 export default {
@@ -12,19 +11,19 @@ export default {
   },
   parameters: {
     backgrounds: {
-        default: 'dark',
-      },
-},
+      default: 'dark',
+    },
+  },
 };
 
 export const Light = (args) => <Heading {...args} />;
 export const Dark = (args) => <Heading {...args} />;
 
 Light.parameters = {
-    backgrounds: {
-        default: 'light',
-        colorDark: true,
-      },
+  backgrounds: {
+    default: 'light',
+    colorDark: true,
+  },
 };
 
 Dark.args = {

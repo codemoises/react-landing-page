@@ -1,8 +1,7 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
-  ${({ theme }) => css`
+  ${() => css`
     display: flex;
     align-items: center;
     text-decoration: none;

@@ -11,7 +11,7 @@ exports[`<NavLinks /> should match snapshot 1`] = `
   text-decoration: none;
   font-size: 1.6rem;
   padding: 1.6rem;
-  color: #0a1128;
+  color: #0A1128;
   position: relative;
 }
 
@@ -38,80 +38,79 @@ exports[`<NavLinks /> should match snapshot 1`] = `
   }
 }
 
-<div>
-  <div
-    class="c0"
+<nav
+  aria-label="Main menu"
+  class="c0"
+>
+  <a
+    class="c1"
+    href="#target1"
+    target="_self"
   >
-    <a
-      class="c1"
-      href="#target1"
-      target="_self"
-    >
-      Link 1
-    </a>
-    <a
-      class="c1"
-      href="#target2"
-      target="_self"
-    >
-      Link 2
-    </a>
-    <a
-      class="c1"
-      href="#target3"
-      target="_self"
-    >
-      Link 3
-    </a>
-    <a
-      class="c1"
-      href="#target4"
-      target="_self"
-    >
-      Link 4
-    </a>
-    <a
-      class="c1"
-      href="#target5"
-      target="_self"
-    >
-      Link 5
-    </a>
-    <a
-      class="c1"
-      href="#target6"
-      target="_self"
-    >
-      Link 6
-    </a>
-    <a
-      class="c1"
-      href="#target7"
-      target="_self"
-    >
-      Link 7
-    </a>
-    <a
-      class="c1"
-      href="#target8"
-      target="_self"
-    >
-      Link 8
-    </a>
-    <a
-      class="c1"
-      href="#target9"
-      target="_self"
-    >
-      Link 9
-    </a>
-    <a
-      class="c1"
-      href="#target10"
-      target="_self"
-    >
-      Link 10
-    </a>
-  </div>
-</div>
+    Link 1
+  </a>
+  <a
+    class="c1"
+    href="#target2"
+    target="_self"
+  >
+    Link 2
+  </a>
+  <a
+    class="c1"
+    href="#target3"
+    target="_self"
+  >
+    Link 3
+  </a>
+  <a
+    class="c1"
+    href="#target4"
+    target="_self"
+  >
+    Link 4
+  </a>
+  <a
+    class="c1"
+    href="#target5"
+    target="_self"
+  >
+    Link 5
+  </a>
+  <a
+    class="c1"
+    href="#target6"
+    target="_self"
+  >
+    Link 6
+  </a>
+  <a
+    class="c1"
+    href="#target7"
+    target="_self"
+  >
+    Link 7
+  </a>
+  <a
+    class="c1"
+    href="#target8"
+    target="_self"
+  >
+    Link 8
+  </a>
+  <a
+    class="c1"
+    href="#target9"
+    target="_self"
+  >
+    Link 9
+  </a>
+  <a
+    class="c1"
+    href="#target10"
+    target="_self"
+  >
+    Link 10
+  </a>
+</nav>
 `;

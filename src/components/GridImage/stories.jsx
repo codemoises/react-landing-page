@@ -1,5 +1,5 @@
-/* eslint-disable prettier/prettier */
 import { GridImage } from '.';
+
 import mock from './mock';
 
 export default {

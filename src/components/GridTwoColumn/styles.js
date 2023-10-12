@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import styled, { css } from 'styled-components';
 import { Title } from '../Heading/styles';
 
@@ -22,18 +21,18 @@ export const Container = styled.div`
 
 export const TextContainer = styled.div`
   ${({ theme }) => css`
-  @media ${theme.media.lteMedium} {
-    margin-bottom: ${theme.spacings.large};
-  }
+    @media ${theme.media.lteMedium} {
+      margin-bottom: ${theme.spacings.large};
+    }
   `}
 `;
 
 export const ImageContainer = styled.div`
-  ${({ theme }) => css``}
+  ${() => css``}
 `;
 
 export const Image = styled.img`
-  ${({ theme }) => css`
+  ${() => css`
     width: 100%;
   `}
 `;

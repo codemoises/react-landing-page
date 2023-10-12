@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { GridTwoColumn } from '.';
 import { mock } from './mock';
 

@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Menu } from '.';
 
 import linksMock from '../NavLinks/mock';
