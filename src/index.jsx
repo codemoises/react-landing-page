@@ -12,7 +12,7 @@ root.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route to="*" element={<Home />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </BrowserRouter>
       <GlobalStyles />

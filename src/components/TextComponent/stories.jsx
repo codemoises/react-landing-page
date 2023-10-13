@@ -4,7 +4,11 @@ export default {
   title: 'TextComponent',
   component: TextComponent,
   args: {
-    children: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi animi soluta corrupti consequuntur nesciunt provident aut, iusto veniam sunt nisi commodi eum dicta voluptates exercitationem delectus distinctio totam maiores assumenda!`,
+    children: `
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Ullam placeat unde harum. Facilis, quasi delectus
+    obcaecati perferendis nobis alias ad aspernatur quod neque,
+    corporis, aperiam numquam. Sint consequatur omnis voluptate.`,
   },
   argTypes: {
     children: { type: 'string' },
