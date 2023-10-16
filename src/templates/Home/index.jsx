@@ -13,10 +13,12 @@ function Home() {
   useEffect(() => {
     const load = async () => {
       const pathname = location.pathname.replace(/[^a-z0-9-_]/gi, '');
-      const slug = pathname ? pathname : config.defaultSlug;
+      const slug = pathname ? pathname : 'landing-page';
 
       try {
-        const data = await fetch(config.url + slug);
+        const data = await fetch(
+          'https://strapi-v4-9tc4.onrender.com/api/pages/?filters%20[slug]=landing-page&populate=deep',
+        );
         const json = await data.json();
         const pageData = mapData(json);
         setData(pageData[0]);
