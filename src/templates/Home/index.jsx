@@ -26,7 +26,7 @@ function Home() {
 
       try {
         const data = await fetch(
-          `https://strapi-v4-9tc4.onrender.com/api/pages/?filters[slug]=${slug}&populate=deep`,
+          `https://strapi-v4-9tc4.onrender.com/api/pages?filters[slug][$eq]=landing-page&populate=*`,
         );
         const json = await data.json();
         const { attributes } = json.data[0];
