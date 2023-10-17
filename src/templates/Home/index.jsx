@@ -1,8 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
+
 import { mapData } from '../../api/map-data';
-import { mockBase } from '../Base/mock';
+
+import { GridTwoColumn } from '../../components/GridTwoColumn';
+import { GridContent } from '../../components/GridContent';
+import { GridText } from '../../components/GridText';
+import { GridImage } from '../../components/GridImage';
+
 import { Base } from '../Base';
+import { PageNotFound } from '../PageNotFound';
+import { Loading } from '../Loading';
 import { useLocation } from 'react-router-dom';
+
 import config from '../../config';
 
 function Home() {
@@ -12,17 +21,18 @@ function Home() {
 
   useEffect(() => {
     const load = async () => {
-      const pathname = location.pathname.replace(/[^a-z0-9-_]/gi, '');
-      const slug = pathname ? pathname : 'landing-page';
+      const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, '');
+      const slug = pathName ? pathName : 'landing-page';
 
       try {
         const data = await fetch(
-          'https://strapi-v4-9tc4.onrender.com/api/pages/?filters%20[slug]=landing-page&populate=deep',
+          `https://strapi-v4-9tc4.onrender.com/api/pages/?filters[slug]=${slug}&populate=deep`,
         );
         const json = await data.json();
-        const pageData = mapData(json);
-        setData(pageData[0]);
-      } catch (e) {
+        const { attributes } = json.data[0];
+        const pageData = mapData([attributes]);
+        setData(() => pageData[0]);
+      } catch {
         setData(undefined);
       }
     };
@@ -34,17 +44,61 @@ function Home() {
     return () => {
       isMounted.current = false;
     };
-  }, [location.pathname]);
+  }, [location]);
+
+  useEffect(() => {
+    if (data === undefined) {
+      document.title = `Página não encontrada | ${config.siteName}`;
+    }
+
+    if (data && !data.slug) {
+      document.title = `Carregando... | ${config.siteName}`;
+    }
+
+    if (data && data.title) {
+      document.title = `${data.title} | ${config.siteName}`;
+    }
+  }, [data]);
 
   if (data === undefined) {
-    return <h1>Página não encontrada</h1>;
+    return <PageNotFound />;
   }
 
   if (data && !data.slug) {
-    return <h1>Carregando...</h1>;
+    return <Loading />;
   }
 
-  return <Base {...mockBase} />;
+  const { menu, sections, footerHtml, slug } = data;
+  const { links, text, link, srcImg } = menu;
+
+  return (
+    <Base
+      links={links}
+      footerHtml={footerHtml}
+      logoData={{ text, link, srcImg }}
+    >
+      {sections.map((section, index) => {
+        const { component } = section;
+        const key = `${slug}-${index}`;
+
+        if (component === 'section.section-two-columns') {
+          return <GridTwoColumn key={key} {...section} />;
+        }
+
+        if (component === 'section.section-content') {
+          return <GridContent key={key} {...section} />;
+        }
+
+        if (component === 'section.section-grid-text') {
+          return <GridText key={key} {...section} />;
+        }
+
+        if (component === 'section.section-grid-image') {
+          return <GridImage key={key} {...section} />;
+        }
+      })}
+    </Base>
+  );
 }
 
 export default Home;
