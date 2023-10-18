@@ -26,7 +26,7 @@ function Home() {
 
       try {
         const data = await fetch(
-          `http://localhost:1337/api/pages?filters[slug][$eq]=${slug}&populate[menu][populate][0]=*,menu_links&populate[sections][populate][0]=*,section_content`,
+          `https://strapi-v4-9tc4.onrender.com/api/pages?filters[slug][$eq]=${slug}&populate[menu][populate][0]=*,menu_links&populate[sections][populate][0]=*,section_content`,
         );
         const json = await data.json();
         const { attributes } = json.data[0];
