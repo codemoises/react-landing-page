@@ -32,7 +32,6 @@ function Home() {
         const { attributes } = json.data[0];
         const pageData = mapData([attributes]);
         setData(() => pageData[0]);
-        console.log(attributes);
       } catch {
         setData(undefined);
       }
